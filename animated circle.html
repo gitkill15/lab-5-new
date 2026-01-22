@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVG Circle Animation (CSS)</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    svg {
+      border: 2px solid #555;
+      background: white;
+      border-radius: 10px;
+    }
+
+    .moving-circle {
+      animation: moveX 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes moveX {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(200px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <svg width="400" height="150" viewBox="0 0 400 150">
+    <circle class="moving-circle" cx="50" cy="75" r="20" fill="#ff6f61" />
+  </svg>
+
+</body>
+</html>
